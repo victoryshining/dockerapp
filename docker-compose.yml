@@ -4,7 +4,11 @@ services:
     build: .
     ports:
       - "5000:5000"
+    deploy:
+      replicas: 2
     depends_on:
       - redis
   redis:
     image: redis:3.2.0
+    deploy:
+      replicas:2
